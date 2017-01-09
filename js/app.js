@@ -19,10 +19,18 @@ $(document).ready(function (){
         }
         $("h1#title").after($section)
         }
-        );
+        )
+        
+        .fail(function(xhr,status,errorThrown){
+            alert(status);
+        });
      
-     $("body").on("click",".book-title",function(){
-       // console.log($book.dataset("id"));
+     $("body").on("click",".book-title",function(event){
+    
+    var bookId=this
+    console.log(bookId.dataset.id)
+    
+       //console.log($book.dataset("id"));
      }
      )
 
